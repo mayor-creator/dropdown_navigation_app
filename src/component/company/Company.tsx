@@ -5,7 +5,7 @@ import arrowUpIcon from "/images/icon-arrow-up.svg";
 export const Company = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const handleToggleFeatures = () => {
+	const handleToggleCompany = () => {
 		setIsOpen((prev) => !prev);
 	};
 
@@ -13,7 +13,7 @@ export const Company = () => {
 		<>
 			<button
 				type="button"
-				onClick={handleToggleFeatures}
+				onClick={handleToggleCompany}
 				aria-controls="company-menu"
 				aria-expanded={isOpen}
 			>
@@ -25,17 +25,11 @@ export const Company = () => {
 			</button>
 
 			{isOpen && (
-				<div>
-					<div>
-						<p>History</p>
-					</div>
-					<div>
-						<p>Our Team</p>
-					</div>
-					<div>
-						<p>Blog</p>
-					</div>
-				</div>
+				<ul id="company-menu">
+					<li>History</li>
+					<li>Our Team</li>
+					<li>Blog</li>
+				</ul>
 			)}
 		</>
 	);

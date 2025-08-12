@@ -29,30 +29,22 @@ export const Features = () => {
 			</button>
 
 			{isOpen && (
-				<ul>
+				<ul id="feature-menu">
 					<li>
-						<figure>
-							<img src={todoIcon} alt="todo list icon" />
-							<figcaption>Todo List</figcaption>
-						</figure>
+						<img src={todoIcon} alt="todo list icon" />
+						<span>Todo List</span>
 					</li>
 					<li>
-						<figure>
-							<img src={calendarIcon} alt="calendar icon" />
-							<figcaption>Calendar</figcaption>
-						</figure>
+						<img src={calendarIcon} alt="calendar icon" />
+						<span>Calendar</span>
 					</li>
 					<li>
-						<figure>
-							<img src={remindersIcon} alt="reminders icon" />
-							<figcaption>Reminders</figcaption>
-						</figure>
+						<img src={remindersIcon} alt="reminders icon" />
+						<span>Reminders</span>
 					</li>
 					<li>
-						<figure>
-							<img src={planningIcon} alt="planning icon" />
-							<figcaption>Planning</figcaption>
-						</figure>
+						<img src={planningIcon} alt="planning icon" />
+						<span>Planning</span>
 					</li>
 				</ul>
 			)}

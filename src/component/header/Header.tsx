@@ -28,6 +28,7 @@ export const Header = () => {
 						cursor: "pointer",
 					}}
 					aria-expanded={isMenuOpen}
+					aria-controls="main-navigation"
 					onClick={handleToggleMenu}
 				>
 					<img
@@ -40,7 +41,7 @@ export const Header = () => {
 			</div>
 
 			{isMenuOpen && (
-				<nav>
+				<nav id="main-navigation">
 					<ul>
 						<li>
 							<Features />
