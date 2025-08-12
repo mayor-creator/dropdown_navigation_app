@@ -1,7 +1,8 @@
 import { useState } from "react";
-import iconClose from "../../../public/images/icon-close-menu.svg";
-import iconMenu from "../../../public/images/icon-menu.svg";
-import logo from "../../../public/images/logo.svg";
+import iconClose from "/images/icon-close-menu.svg";
+import iconMenu from "/images/icon-menu.svg";
+import logo from "/images/logo.svg";
+import { Company } from "../company/Company";
 import { Features } from "../features/Features";
 
 export const Header = () => {
@@ -41,6 +42,7 @@ export const Header = () => {
 			{isMenuOpen && (
 				<nav>
 					<Features />
+					<Company />
 					<li>career</li>
 					<li>about</li>
 					<p>login</p>

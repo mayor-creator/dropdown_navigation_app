@@ -1,10 +1,10 @@
 import { useState } from "react";
-import arrowDownIcon from "../../../public/images/icon-arrow-down.svg";
-import arrowUpIcon from "../../../public/images/icon-arrow-up.svg";
-import calendarIcon from "../../../public/images/icon-calendar.svg";
-import planningIcon from "../../../public/images/icon-planning.svg";
-import remindersIcon from "../../../public/images/icon-reminders.svg";
-import todoIcon from "../../../public/images/icon-todo.svg";
+import arrowDownIcon from "/images/icon-arrow-down.svg";
+import arrowUpIcon from "/images/icon-arrow-up.svg";
+import calendarIcon from "/images/icon-calendar.svg";
+import planningIcon from "/images/icon-planning.svg";
+import remindersIcon from "/images/icon-reminders.svg";
+import todoIcon from "/images/icon-todo.svg";
 
 export const Features = () => {
 	const [isOpen, setIsOpen] = useState(false);

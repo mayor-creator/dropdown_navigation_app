@@ -1,5 +1,5 @@
-import desktopHero from "../../../public/images/image-hero-desktop.png";
-import mobileHero from "../../../public/images/image-hero-mobile.png";
+import desktopHero from "/images/image-hero-desktop.png";
+import mobileHero from "/images/image-hero-mobile.png";
 import { Footer } from "../footer/Footer";
 import { Header } from "../header/Header";
 
