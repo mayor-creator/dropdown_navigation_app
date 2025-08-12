@@ -41,12 +41,20 @@ export const Header = () => {
 
 			{isMenuOpen && (
 				<nav>
-					<Features />
-					<Company />
-					<li>career</li>
-					<li>about</li>
-					<p>login</p>
-					<button type="button">Register</button>
+					<ul>
+						<li>
+							<Features />
+						</li>
+						<li>
+							<Company />
+						</li>
+						<li>career</li>
+						<li>about</li>
+						<li>login</li>
+						<li>
+							<button type="button">Register</button>
+						</li>
+					</ul>
 				</nav>
 			)}
 		</header>

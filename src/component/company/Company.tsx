@@ -11,7 +11,12 @@ export const Company = () => {
 
 	return (
 		<>
-			<button type="button" onClick={handleToggleFeatures}>
+			<button
+				type="button"
+				onClick={handleToggleFeatures}
+				aria-controls="company-menu"
+				aria-expanded={isOpen}
+			>
 				Company{" "}
 				<img
 					src={isOpen ? arrowUpIcon : arrowDownIcon}

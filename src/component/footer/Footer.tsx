@@ -7,16 +7,16 @@ export const Footer = () => {
 	return (
 		<footer>
 			<div>
-				<img src={clientDatabiz} alt="" />
+				<img src={clientDatabiz} alt="data icon" />
 			</div>
 			<div>
-				<img src={clientAudiophile} alt="" />
+				<img src={clientAudiophile} alt="audio icon" />
 			</div>
 			<div>
-				<img src={clientMeet} alt="" />
+				<img src={clientMeet} alt="meet icon" />
 			</div>
 			<div>
-				<img src={clientMaker} alt="" />
+				<img src={clientMaker} alt="client icon" />
 			</div>
 		</footer>
 	);
