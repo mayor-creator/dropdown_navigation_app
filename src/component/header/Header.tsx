@@ -14,6 +14,16 @@ const HeaderContainer = styled.header`
 	position: relative;
 `;
 
+const LeftGroup = styled.div`
+  display: none;
+
+	@media(min-width: 768px){
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+`;
+
 const MenuToggle = styled.button`
 	background: none;
 	border: none;
@@ -44,17 +54,15 @@ const Nav = styled.nav<{ isOpen: boolean }>`
 	flex-direction: column;
 	justify-content: space-between;
 
-
 	@media (min-width: 768px) {
 		position: static;
 		transform: none;
 		width: auto;
 		height: auto;
-		flex-direction: row;
-		align-items: center;
 		background: none;
 		box-shadow: none;
 		padding: 0;
+		justify-content: flex-end;
 	}
 `;
 
@@ -66,6 +74,10 @@ const NavList = styled.ul`
 	@media (min-width: 768px) {
 		display: flex;
 		gap: 2rem;
+
+		&.mobile-only{
+			display:none;
+		}
 	}
 `;
 
@@ -87,6 +99,15 @@ const AuthButton = styled.button`
 	border-radius: 4px;
 `;
 
+const MobileLogo = styled.div`
+	display: flex;
+	align-items: center;
+
+	@media (min-width: 758px){
+		display: none;
+	}
+`;
+
 export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -96,9 +117,23 @@ export const Header = () => {
 
 	return (
 		<HeaderContainer>
-			<div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+			<MobileLogo>
 				<img src={logo} alt="logo" />
-			</div>
+			</MobileLogo>
+
+			<LeftGroup>
+				<img src={logo} alt="logo" />
+				<NavList>
+					<li>
+						<Features />
+					</li>
+					<li>
+						<Company />
+					</li>
+					<li>career</li>
+					<li>about</li>
+				</NavList>
+			</LeftGroup>
 
 			<MenuToggle
 				type="button"
@@ -113,8 +148,9 @@ export const Header = () => {
 					width="24"
 				/>
 			</MenuToggle>
+
 			<Nav id="main-navigation" isOpen={isMenuOpen}>
-				<NavList>
+				<NavList className="mobile-only">
 					<li>
 						<Features />
 					</li>
@@ -125,7 +161,7 @@ export const Header = () => {
 					<li>about</li>
 				</NavList>
 				<AuthLinks>
-					<a href="#">login</a>
+					<a href="/login">login</a>
 					<AuthButton>Register</AuthButton>
 				</AuthLinks>
 			</Nav>
