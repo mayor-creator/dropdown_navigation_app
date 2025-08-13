@@ -130,8 +130,8 @@ export const Header = () => {
 					<li>
 						<Company />
 					</li>
-					<li>career</li>
-					<li>about</li>
+					<li>Career</li>
+					<li>About</li>
 				</NavList>
 			</LeftGroup>
 
@@ -157,8 +157,8 @@ export const Header = () => {
 					<li>
 						<Company />
 					</li>
-					<li>career</li>
-					<li>about</li>
+					<li>Career</li>
+					<li>About</li>
 				</NavList>
 				<AuthLinks>
 					<a href="/login">login</a>
