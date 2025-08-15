@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import styled from "styled-components";
 import arrowDownIcon from "/images/icon-arrow-down.svg";
 import arrowUpIcon from "/images/icon-arrow-up.svg";
@@ -28,15 +28,16 @@ const DropdownMenu = styled.ul<{ isOpen: boolean }>`
 	
 	@media (min-width: 768px) {
 		position: absolute;
-		top: 100%; // place below button
+		top: 100%; 
 		left: 0;
-		min-width: 180px;
+		min-width: 9.563rem;;
 		z-index: 1000;
 	}
 `;
 
 export const Company = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const companyMenu = useId();
 
 	const handleToggleCompany = () => {
 		setIsOpen((prev) => !prev);
@@ -57,7 +58,7 @@ export const Company = () => {
 				/>
 			</DropdownButton>
 
-			<DropdownMenu id="company-menu" isOpen={isOpen}>
+			<DropdownMenu id={companyMenu} isOpen={isOpen}>
 				<li>History</li>
 				<li>Our Team</li>
 				<li>Blog</li>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import styled from "styled-components";
 import iconClose from "/images/icon-close-menu.svg";
 import iconMenu from "/images/icon-menu.svg";
@@ -110,6 +110,7 @@ const MobileLogo = styled.div`
 
 export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const mainNavigation = useId();
 
 	const handleToggleMenu = () => {
 		setIsMenuOpen((prev) => !prev);
@@ -149,7 +150,7 @@ export const Header = () => {
 				/>
 			</MenuToggle>
 
-			<Nav id="main-navigation" isOpen={isMenuOpen}>
+			<Nav id={mainNavigation} isOpen={isMenuOpen}>
 				<NavList className="mobile-only">
 					<li>
 						<Features />

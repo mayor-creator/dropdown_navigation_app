@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import styled from "styled-components";
 import arrowDownIcon from "/images/icon-arrow-down.svg";
 import arrowUpIcon from "/images/icon-arrow-up.svg";
@@ -32,15 +32,22 @@ const DropdownMenu = styled.ul<{ isOpen: boolean }>`
 	
 	@media (min-width: 768px) {
 		position: absolute;
-		top: 100%; // place below button
+		top: 100%; 
 		left: 0;
-		min-width: 180px;
+		min-width: 9.563rem;
 		z-index: 1000;
 	}
 `;
 
+const NavList = styled.li`
+	display: flex;
+	gap: 1rem;
+	padding-bottom: 1rem;
+`;
+
 export const Features = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const featureMenu = useId();
 
 	const handleToggleFeatures = () => {
 		setIsOpen((prev) => !prev);
@@ -61,23 +68,23 @@ export const Features = () => {
 				/>
 			</DropdownButton>
 
-			<DropdownMenu id="feature-menu" isOpen={isOpen}>
-				<li>
+			<DropdownMenu id={featureMenu} isOpen={isOpen}>
+				<NavList>
 					<img src={todoIcon} alt="todo list icon" />
 					<span>Todo List</span>
-				</li>
-				<li>
+				</NavList>
+				<NavList>
 					<img src={calendarIcon} alt="calendar icon" />
 					<span>Calendar</span>
-				</li>
-				<li>
+				</NavList>
+				<NavList>
 					<img src={remindersIcon} alt="reminders icon" />
 					<span>Reminders</span>
-				</li>
-				<li>
+				</NavList>
+				<NavList>
 					<img src={planningIcon} alt="planning icon" />
 					<span>Planning</span>
-				</li>
+				</NavList>
 			</DropdownMenu>
 		</DropdownWrapper>
 	);
