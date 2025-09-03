@@ -24,13 +24,13 @@ const DropdownMenu = styled.ul<{ isOpen: boolean }>`
 	list-style: none;
 	margin: 0;
 	padding: 1rem;
-	background: white;
-	border-radius: 8px;
-	box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 	display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 	position: static;
 	
 	@media (min-width: 768px) {
+		background: white;
+		border-radius: 8px;
+		box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 		position: absolute;
 		top: 100%; 
 		left: 0;

@@ -42,7 +42,7 @@ const Nav = styled.nav<{ isOpen: boolean }>`
 	top: 0;
 	right: 0;
 	height: 100vh;
-	width: 50vw;
+	width: 240px;
 	background-color: var(--color-gray-50);
 	padding: 2rem 1rem;
 	box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ const NavList = styled.ul`
 `;
 
 const AuthLinks = styled.div`
-	margin-top: 1rem;
+	// margin-top: 1rem;
 
 	@media (min-width: 768px) {
 		display: flex;

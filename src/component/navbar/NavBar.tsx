@@ -10,6 +10,11 @@ const TitleContainer = styled.div`
 	align-items: center;
 	gap: 1rem;
 	padding: 1rem;
+
+	@media (min-width: 758px){
+		grid-column-start: 1;
+    grid-row-start: 1;
+	}
 `;
 
 const Title = styled.h1`
@@ -40,17 +45,33 @@ const Button = styled.button`
 	height: 3rem;
 `;
 
+const MainContainer = styled.main`
+	@media (min-width: 758px){
+		display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 24px;
+	}
+`;
+
+const ImageContainer = styled.div`
+	@media (min-width: 758px){
+		grid-column-start: 2;
+    grid-row-start: 1;
+	}
+`;
+
 export const NavBar = () => {
 	return (
 		<>
 			<Header />
-			<main>
-				<div>
+			<MainContainer>
+				<ImageContainer>
 					<picture>
 						<source media="(min-width: 1024px)" srcSet={desktopHero} />
-						<img src={mobileHero} alt="" />
+						<img src={mobileHero} alt="hero" className="desktop-only" />
 					</picture>
-				</div>
+				</ImageContainer>
 				<TitleContainer>
 					<Title>Make remote work</Title>
 					<Message>
@@ -59,7 +80,7 @@ export const NavBar = () => {
 					</Message>
 					<Button type="button">Learn more</Button>
 				</TitleContainer>
-			</main>
+			</MainContainer>
 			<Footer />
 		</>
 	);
