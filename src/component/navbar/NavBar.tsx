@@ -14,6 +14,11 @@ const TitleContainer = styled.div`
 	@media (min-width: 758px){
 		grid-column-start: 1;
     grid-row-start: 1;
+		justify-content: center;
+		gap: 0rem;
+		padding: 0rem;
+		align-items: flex-start;
+		border: 1px solid red;
 	}
 `;
 
@@ -22,6 +27,12 @@ const Title = styled.h1`
 	font-size: 2.25rem;
 	font-weight: 700;
 	color: var(--color-gray-950);
+
+	@media (min-width: 758px){
+		text-align: start;
+		font-size: 5rem;
+		font-weight: bold;
+	}
 `;
 
 const Message = styled.p`
@@ -58,6 +69,9 @@ const ImageContainer = styled.div`
 	@media (min-width: 758px){
 		grid-column-start: 2;
     grid-row-start: 1;
+		width: 100%;
+		max-width: 480px;
+		height: auto;
 	}
 `;
 

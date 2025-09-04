@@ -82,7 +82,6 @@ const NavList = styled.ul`
 `;
 
 const AuthLinks = styled.div`
-	// margin-top: 1rem;
 
 	@media (min-width: 768px) {
 		display: flex;
@@ -169,3 +168,6 @@ export const Header = () => {
 		</HeaderContainer>
 	);
 };
+
+// width: 480px
+// height: 640px
