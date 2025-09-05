@@ -168,6 +168,3 @@ export const Header = () => {
 		</HeaderContainer>
 	);
 };
-
-// width: 480px
-// height: 640px

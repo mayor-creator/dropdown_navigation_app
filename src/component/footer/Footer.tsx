@@ -8,6 +8,12 @@ const FooterWrapper = styled.footer`
   display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (min-width: 768px) {
+		gap: 24px;
+		justify-content: flex-start;
+		padding-left: 3.75rem;
+	}
 `;
 
 export const Footer = () => {

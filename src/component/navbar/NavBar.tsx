@@ -11,14 +11,14 @@ const TitleContainer = styled.div`
 	gap: 1rem;
 	padding: 1rem;
 
-	@media (min-width: 758px){
+	@media (min-width: 768px){
 		grid-column-start: 1;
     grid-row-start: 1;
 		justify-content: center;
-		gap: 0rem;
+		gap: 1.5rem;
 		padding: 0rem;
 		align-items: flex-start;
-		border: 1px solid red;
+		height: 100%;
 	}
 `;
 
@@ -28,7 +28,7 @@ const Title = styled.h1`
 	font-weight: 700;
 	color: var(--color-gray-950);
 
-	@media (min-width: 758px){
+	@media (min-width: 768px){
 		text-align: start;
 		font-size: 5rem;
 		font-weight: bold;
@@ -42,6 +42,13 @@ const Message = styled.p`
 	text-align: center;
 	padding-left: 1rem;
 	padding-right: 1rem;
+
+	@media (min-width: 768px){
+		font-size: 1.125rem;
+		width: 28.438rem;
+  	text-align: start;
+  	padding: 0rem;
+	}
 `;
 
 const Button = styled.button`
@@ -57,21 +64,31 @@ const Button = styled.button`
 `;
 
 const MainContainer = styled.main`
-	@media (min-width: 758px){
+	
+	@media (min-width: 768px){
 		display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 24px;
+		align-items: center;
+		justify-items: center;
+		padding-right: 3.75rem;
+  	padding-left: 3.75rem;
+  	padding-top: 3.75rem;
+		padding-bottom: 2.5rem;
 	}
 `;
 
 const ImageContainer = styled.div`
-	@media (min-width: 758px){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (min-width: 768px){
 		grid-column-start: 2;
     grid-row-start: 1;
 		width: 100%;
-		max-width: 480px;
-		height: auto;
+		max-width: 30rem;
+		height: 100%;
 	}
 `;
 
